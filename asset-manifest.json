@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/tripmate-webapp/static/css/main.1eccfdab.css",
-    "main.js": "/tripmate-webapp/static/js/main.66fcc9ce.js",
-    "static/js/239.e4a0b263.chunk.js": "/tripmate-webapp/static/js/239.e4a0b263.chunk.js",
-    "static/js/977.90f128ab.chunk.js": "/tripmate-webapp/static/js/977.90f128ab.chunk.js",
-    "static/js/455.dc57cf52.chunk.js": "/tripmate-webapp/static/js/455.dc57cf52.chunk.js",
-    "static/media/bootstrap-icons.woff?": "/tripmate-webapp/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
-    "static/media/bootstrap-icons.woff2?": "/tripmate-webapp/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
-    "static/media/slick.svg": "/tripmate-webapp/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/tripmate-webapp/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/tripmate-webapp/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "index.html": "/tripmate-webapp/index.html",
-    "static/media/slick.woff": "/tripmate-webapp/static/media/slick.295183786cd8a1389865.woff",
-    "main.1eccfdab.css.map": "/tripmate-webapp/static/css/main.1eccfdab.css.map",
-    "main.66fcc9ce.js.map": "/tripmate-webapp/static/js/main.66fcc9ce.js.map",
-    "239.e4a0b263.chunk.js.map": "/tripmate-webapp/static/js/239.e4a0b263.chunk.js.map",
-    "977.90f128ab.chunk.js.map": "/tripmate-webapp/static/js/977.90f128ab.chunk.js.map",
-    "455.dc57cf52.chunk.js.map": "/tripmate-webapp/static/js/455.dc57cf52.chunk.js.map"
+    "main.css": "/tripmatehotel-webapp/static/css/main.1df8d1ea.css",
+    "main.js": "/tripmatehotel-webapp/static/js/main.e5fe6aa5.js",
+    "static/js/239.e4a0b263.chunk.js": "/tripmatehotel-webapp/static/js/239.e4a0b263.chunk.js",
+    "static/js/977.90f128ab.chunk.js": "/tripmatehotel-webapp/static/js/977.90f128ab.chunk.js",
+    "static/js/455.dc57cf52.chunk.js": "/tripmatehotel-webapp/static/js/455.dc57cf52.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/tripmatehotel-webapp/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/bootstrap-icons.woff2?": "/tripmatehotel-webapp/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/slick.svg": "/tripmatehotel-webapp/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/tripmatehotel-webapp/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/tripmatehotel-webapp/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/tripmatehotel-webapp/index.html",
+    "static/media/slick.woff": "/tripmatehotel-webapp/static/media/slick.295183786cd8a1389865.woff",
+    "main.1df8d1ea.css.map": "/tripmatehotel-webapp/static/css/main.1df8d1ea.css.map",
+    "main.e5fe6aa5.js.map": "/tripmatehotel-webapp/static/js/main.e5fe6aa5.js.map",
+    "239.e4a0b263.chunk.js.map": "/tripmatehotel-webapp/static/js/239.e4a0b263.chunk.js.map",
+    "977.90f128ab.chunk.js.map": "/tripmatehotel-webapp/static/js/977.90f128ab.chunk.js.map",
+    "455.dc57cf52.chunk.js.map": "/tripmatehotel-webapp/static/js/455.dc57cf52.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1eccfdab.css",
-    "static/js/main.66fcc9ce.js"
+    "static/css/main.1df8d1ea.css",
+    "static/js/main.e5fe6aa5.js"
   ]
 }
