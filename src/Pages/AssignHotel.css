@@ -1,0 +1,1457 @@
+/* =========================
+   Card chung (dùng cho phòng, khách sạn)
+=========================== */
+.card {
+  border-radius: 16px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  background-color: #fff;
+}
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Room Type Card Styles
+=========================== */
+.room-type-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+.room-type-card {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  height: 240px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.room-type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.room-type-card.selected {
+  border: 3px solid #0d6efd;
+}
+
+.room-type-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.room-type-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: white;
+}
+
+.room-type-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.room-type-desc {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* =========================
+   Button Styles
+=========================== */
+
+
+.my-form .btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+
+.btn-success:disabled {
+  background-color: #ddd;
+  border-color: #ddd;
+}
+
+
+
+/* =========================
+   Input styles
+=========================== */
+input.form-control {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   Hotel Card Styles
+=========================== */
+.hotel-card {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hotel-card.selected {
+  border: 2px solid #3b82f6; /* màu xanh dương khi chọn */
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.hotel-card .no-image {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.hotel-card .info {
+  padding: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-card h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.hotel-card p {
+  margin: 2px 0;
+  color: #555;
+  font-size: 1.5rem;
+}
+
+.rating-info {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 6px;
+}
+
+.view-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  width: 90%;
+  margin: 0 auto 12px;
+  transition: background-color 0.2s ease;
+}
+
+.view-btn:hover {
+  background-color: #2563eb;
+}
+
+/* =========================
+   Modal styles
+=========================== */
+
+/* =========================
+   Card phòng chung
+=========================== */
+/* Card phòng - nâng cấp chuyên nghiệp */
+.card.h-100 {
+  border-radius: 20px ;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none ;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card.h-100:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.25);
+}
+
+/* Ảnh phòng phủ toàn bộ */
+.card-img-top.rounded-top {
+  height: 200px ;
+  object-fit: cover ;
+  transition: transform 0.4s ease;
+}
+
+.card.h-100:hover .card-img-top.rounded-top {
+  transform: scale(1.05);
+}
+
+/* Badge trạng thái phòng góc trên trái */
+.room-status-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.room-status-available {
+  background-color: #28a745; /* xanh lá */
+}
+
+.room-status-booked {
+  background-color: #dc3545; /* đỏ */
+}
+
+/* Nút chuyển ảnh chỉ hiện khi hover card */
+.card.h-100:hover .btn.btn-dark.position-absolute {
+  opacity: 0.9 ;
+}
+
+.btn.btn-dark.position-absolute {
+  background-color: rgba(0,0,0,0.4) ;
+  color: white ;
+  border: none ;
+  width: 34px ;
+  height: 34px ;
+  border-radius: 50% ;
+  font-size: 18px ;
+  display: flex ;
+  align-items: center ;
+  justify-content: center ;
+  transition: opacity 0.3s ease ;
+  opacity: 0 ;
+  cursor: pointer;
+  user-select: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn.btn-dark.position-absolute.left-btn {
+  left: 12px;
+}
+
+.btn.btn-dark.position-absolute.right-btn {
+  right: 12px;
+}
+
+.btn.btn-dark.position-absolute:hover {
+  background-color: rgba(0,0,0,0.75) ;
+  opacity: 1 ;
+}
+
+/* Card body */
+.card-body {
+  padding: 20px ;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Tiêu đề phòng */
+.card-title.fw-bold.fs-5, 
+.form-check-label.fw-bold.fs-5 {
+  font-size: 1.25rem ;
+  font-weight: 700 ;
+  margin-bottom: 8px ;
+  color: #222;
+}
+
+/* Mô tả nhỏ */
+.card-body p, .form-check-label {
+  margin-bottom: 8px ;
+  font-size: 15px ;
+  color: #555 ;
+  line-height: 1.3;
+}
+
+/* Giá tiền nổi bật */
+.price-tag {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #28a745;
+  margin-top: 10px;
+}
+
+/* Checkbox lớn hơn, dễ bấm */
+.my-form .form-check-input {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.my-form .form-check-label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Checkin/Checkout inputs đẹp hơn */
+.card-body input[type="datetime-local"] {
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  padding: 8px 12px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.card-body input[type="datetime-local"]:focus {
+  border-color: #0d6efd;
+  outline: none;
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
+}
+
+/* Validation lỗi */
+.text-danger {
+  font-size: 0.9rem;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.left-btn {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-btn {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* =========================
+   Nút highlight (Confirm booking)
+=========================== */
+.btn-highlight {
+  background: linear-gradient(45deg, #28a745, #1e7e34);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.6);
+  color: white;
+  border: none;
+  font-size: 14px;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-highlight:hover:not(:disabled) {
+  background: linear-gradient(45deg, #218838, #1c7430);
+  box-shadow: 0 6px 16px rgba(33, 136, 56, 0.8);
+  color: white;
+  transform: scale(1.05);
+}
+
+.btn-highlight:disabled {
+  background: #a5d6a7;
+  box-shadow: none;
+  color: #eee;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================
+   Member count style (text)
+=========================== */
+.member-count {
+  font-size: 1.6rem;          
+  font-weight: 600;           
+  color: #222222;             
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  margin: 16px 0;
+  user-select: none;          
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.member-count strong {
+  font-weight: 700;
+  color: #1a73e8;
+  font-size: 1.6rem;
+  margin-left: 6px;
+}
+
+/* =========================
+   Card hover effect (chung)
+=========================== */
+.card:hover {
+  transform: translateY(-3px);
+  transition: all 0.2s ease-in-out;
+}
+
+/* =========================
+   Recommended Hotels Section
+=========================== */
+.recommended-hotels-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  border: 2px solid #ffe5b4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 960px;
+  margin: 0 auto 32px;
+}
+/* Tên khách sạn */
+.hotel-name-label {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+/* Wrapper modal */
+.reviews-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+/* Dialog */
+.reviews-modal-dialog {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Modal content */
+.reviews-modal-content {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.reviews-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+/* Title */
+.reviews-modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+.custom-error-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-error-message {
+  background-color: #fff3cd; /* màu vàng nhạt */
+  color: #856404; /* màu chữ tối hơn */
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ffeeba;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Close button */
+.reviews-modal-close {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+.reviews-modal-close:hover {
+  color: #fbf4f5;
+}
+
+/* Body */
+.reviews-modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 1rem 1.5rem;
+}
+
+/* Review card */
+/* Review card */
+.reviews-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease;
+}
+.reviews-card:hover {
+  transform: translateY(-3px);
+}
+.reviews-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Review comment */
+.review-comment {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #555;
+  margin: 0.25rem 0;
+}
+
+/* Review date */
+.review-date {
+  font-size: 1.6rem;
+  color: #888;
+  margin: 0;
+}
+
+/* Review image */
+.review-image-wrapper img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+/* Modal body (nếu muốn gỡ scrollbar) */
+
+/* Skeleton loader */
+.reviews-skeleton-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.reviews-skeleton {
+  height: 16px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+.reviews-skeleton.short {
+  width: 60%;
+}
+
+/* Review image */
+.review-image-wrapper img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+/* Hint review nhỏ, nhạt hơn */
+.hotel-review-hint {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #6c757d;
+  font-style: italic;
+  transition: color 0.2s ease-in-out;
+}
+
+.hotel-name-label:hover .hotel-review-hint {
+  color: #0d6efd; /* Hover đổi màu xanh để gợi nhấn vào */
+  cursor: pointer;
+}
+
+.recommended-hotels-title {
+  font-size: 28px;
+  color: #ff5e00;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.recommended-hotels-title::before {
+  content: "🔥";
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.hotel-card-recommend {
+  background-color: #ffffff;
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease;
+  min-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hotel-card-recommend:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.hotel-card-recommend h5 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.hotel-rating-info {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #666;
+}
+
+.hotel-reason {
+  font-size: 14px;
+  margin-top: 6px;
+  color: #118a07;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.hotel-reason::before {
+  content: "🌟";
+  margin-right: 5px;
+}
+
+/* =========================
+   Room Card (custom styles)
+=========================== */
+.room-card {
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15) ;
+}
+
+/* Booked room card opacity */
+.booked-room-card {
+  border-radius: 16px;
+  opacity: 0.6;
+}
+
+/* =========================
+   Room image styles
+=========================== */
+.room-img {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.room-img-placeholder {
+  height: 180px;
+  background-color: #6c757d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* =========================
+   Room image buttons (carousel arrows)
+=========================== */
+.room-img-btn {
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.room-img-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.left-btn {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-btn {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.custom-modal-title {
+  font-size: 2.5rem;              /* chữ rất to */
+  font-weight: 900;               /* cực kỳ đậm */
+  color: #0d6efd;                 /* màu xanh bootstrap primary */
+  text-shadow: 2px 2px 8px rgba(13, 110, 253, 0.4); /* bóng xanh nhẹ nổi bật */
+  letter-spacing: 1px;            /* khoảng cách chữ rộng */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* font hiện đại, dễ đọc */
+  text-transform: uppercase;      /* chữ hoa toàn bộ */
+  margin-bottom: 0.5rem;
+  user-select: none;              /* không cho bôi đen */
+}
+.confirm-container {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: white;
+  display: flex;
+  justify-content: center; /* Căn giữa */
+  border-top: 1px solid #ddd;
+  z-index: 20;
+}
+
+.confirm-container .btn {
+  min-width: 160px; /* Giữ nút không bị nhỏ quá */
+}
+.date-time-container {
+  display: flex;
+  gap: 16px; /* Khoảng cách giữa Check-in và Check-out */
+  margin-top: 10px;
+}
+
+.date-time-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Chia đều chiều rộng */
+}
+
+.date-time-field label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.date-time-field input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.date-time-field input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.5);
+}
+
+/* Responsive - màn nhỏ sẽ tự xuống hàng */
+@media (max-width: 600px) {
+  .date-time-container {
+    flex-direction: column;
+  }
+}
+.maintenance-rooms-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start; /* giúp các card căn trên cùng */
+}
+
+/* Khi chỉ có 1 phòng maintenance thì căn giữa */
+.maintenance-rooms-container.single-room {
+  justify-content: center;
+}
+
+/* Card chứa phòng maintenance */
+.maintenance-room-card {
+  flex: 1 1 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+  min-width: 280px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .maintenance-room-card {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .maintenance-room-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+/* Cố định chiều cao card để tránh nhảy layout */
+.card.border-danger {
+  height: 420px; /* bạn điều chỉnh theo nội dung */
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0; /* xám nhạt */
+}
+
+/* Nội dung card dàn đều theo cột */
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive - màn nhỏ sẽ tự xuống hàng */
+@media (max-width: 600px) {
+  .date-time-container {
+    flex-direction: column;
+  }
+}
+.room-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.room-modal-content {
+  background: #fff;
+  border-radius: 16px;
+  width: 95%;
+  max-width: 1200px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+/* ===== Modal Header ===== */
+.room-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.room-modal-title {
+  font-size: 2rem;
+  font-weight: 1000;
+}
+
+.room-close {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #555;
+}
+.room-close:hover {
+  color: #000;
+}
+
+/* ===== Modal Body ===== */
+.room-modal-body {
+  padding: 1.5rem;
+}
+.room-type-desc-room {
+  font-size: 1.5rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.member-count {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Date Filter ===== */
+.date-filter-container {
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.date-time-field label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ===== Room Card ===== */
+.room-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.room-card:hover {
+  transform: translateY(-4px);
+}
+
+.room-carousel-img {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.room-img-placeholder {
+  height: 200px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+/* ===== Carousel Controls ===== */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 50%;
+}
+.carousel-btn:hover {
+  background: rgba(255,255,255,1);
+}
+
+.left-btn { left: 8px; }
+.right-btn { right: 8px; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+.carousel-dots .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.carousel-dots .dot.active {
+  background-color: #333;
+}
+
+/* ===== Room Info ===== */
+.room-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.members-left {
+  font-size: 0.9rem;
+  color: #d9534f;
+  font-weight: 500;
+}
+
+.price-tag {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.old-price {
+  text-decoration: line-through;
+  margin-right: 8px;
+  color: #888;
+}
+.final-price {
+  color: #28a745;
+  font-size: 1.2rem;
+}
+.discount-badge {
+  background: #dc3545;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 6px;
+}
+
+/* ===== Status Badge ===== */
+.rm-status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.rm-status-badge.available {
+  background: #d4edda;
+  color: #155724;
+}
+.rm-status-badge.unavailable {
+  background: #f8d7da;
+  color: #721c24;
+}
+.rm-status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* ===== Maintenance Section ===== */
+.maintenance-title {
+  font-size: 1.3rem;
+  border-bottom: 2px solid #dc3545;
+  padding-bottom: 6px;
+}
+
+.maintenance-room-card {
+  border: 2px solid #dc3545;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.maintenance-room-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.maintenance-room-img-placeholder {
+  height: 200px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+/* ===== Confirm Button ===== */
+.confirm-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-confirm {
+  background: #28a745;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.btn-confirm:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+.btn-confirm:hover:not(:disabled) {
+  background: #218838;
+}
+/* ===== Close Button in Modal ===== */
+.room-close {
+  background: transparent;
+  border: none;
+  font-size: 2rem;       /* kích thước dấu × */
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  color: #555;           /* màu mặc định */
+  transition: all 0.2s ease-in-out;
+}
+
+.room-close:hover {
+  color: #000;           /* hover đậm hơn */
+  transform: scale(1.2); /* hiệu ứng phóng to nhẹ */
+}
+
+.room-close:focus {
+  outline: none;         /* bỏ viền xanh khi focus */
+}
+.AI-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  
+}
+
+.AI-modal-content {
+  background: #fff;
+  border-radius: 16px;
+  width: 95%;
+  max-width: 1200px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  overflow-y: auto;
+  max-height: 90vh;
+  padding: 1.5rem;
+  animation: fadeInScale 0.3s ease;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ===== Header ===== */
+.AI-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
+.AI-room-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.AI-close-btn2 {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s ease-in-out;
+}
+.AI-close-btn2:hover {
+  color: #000;
+  transform: scale(1.2);
+}
+
+/* ===== Body ===== */
+.AI-modal-body {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ===== Budget Slider ===== */
+.budget-slider {
+  display: flex;
+  align-items: center;
+}
+.slider-highlight {
+  flex: 1;
+  accent-color: #0d6efd;
+}
+.budget-value {
+  font-weight: 600;
+  color: #333;
+}
+.budget-amount {
+  font-weight: 600;
+  color: #28a745;
+}
+
+/* ===== Nights Input ===== */
+.nights-input {
+  width: 120px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.hotel-reservation-wrapper {
+  margin-top: 2rem;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ===== Amenities ===== */
+.amenities-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+.amenity-item:hover {
+  background: #f1f1f1;
+}
+.amenity-item input {
+  accent-color: #0d6efd;
+}
+
+/* ===== Sort Dropdown ===== */
+.sort-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sort-label {
+  font-weight: 500;
+}
+.sort-select {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+savings {
+  color: #dc3545;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ===== Total Price ===== */
+.total-price {
+  font-weight: 600;
+  margin-top: 6px;
+  color: #333;
+}
+
+/* ===== Amenities Chips ===== */
+.room-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.amenity-chip {
+  background: #f1f8ff;
+  color: #0d6efd;
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.no-amenities {
+  color: #888;
+  font-size: 0.9rem;
+}
+.AI-room-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 360px;   /* giới hạn chiều rộng */
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ===== Carousel Inner (chứa item) ===== */
+.AI-carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+  min-width: 100%;
+  height: 200px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.4s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Active Item ===== */
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+/* Column wrapper */
+.rm-col {
+  padding: 0.5rem;
+  flex: 0 0 50%; /* col-md-6 */
+}
+
+@media (min-width: 992px) {
+  .rm-col { flex: 0 0 33.3333%; } /* col-lg-4 */
+}
+
+/* Card */
+.rm-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s;
+}
+
+.rm-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+
+.rm-card-selected { border: 2px solid #28a745; }
+.rm-card-default { border: 1px solid #e0e0e0; }
+.rm-card-disabled { opacity: 0.5; pointer-events: none; }
+
+/* Image */
+.rm-image-wrapper { position: relative; width: 100%; height: 180px; overflow: hidden; }
+.rm-card-img { width: 100%; height: 100%; object-fit: cover; }
+.rm-img-placeholder { display:flex; align-items:center; justify-content:center; height:180px; background:#f5f5f5; color:#aaa; }
+
+/* Carousel */
+.rm-carousel-btn { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.8); border:none; padding:4px 8px; cursor:pointer; border-radius:4px; font-size:18px; }
+.rm-left-btn { left:8px; } .rm-right-btn { right:8px; }
+.rm-carousel-dots { position:absolute; bottom:8px; left:50%; transform:translateX(-50%); display:flex; gap:4px; }
+.rm-dot { width:6px; height:6px; background:#ddd; border-radius:50%; cursor:pointer; }
+.rm-dot-active { background:#28a745; }
+
+/* Body */
+.rm-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.rm-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.rm-checkbox-label {
+  margin-left: 0.6rem;
+  font-weight: bold;
+  font-size: 1.5rem; /* tăng mạnh */
+}
+.rm-desc {
+  font-size: 1.2rem; /* tăng mạnh */
+  color: #555;
+  margin-bottom: 0.6rem;
+}
+.rm-info {
+  font-size: 1.2rem; /* tăng mạnh */
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+.rm-members-left {
+  font-size: 1.1rem;
+  color: #17a2b8;
+}
+
+/* Status badge */
+.rm-status-badge {
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 1.1rem; /* tăng mạnh */
+  font-weight: 700;
+}
+
+/* Price */
+.rm-price {
+  font-weight: 800;
+  font-size: 1.5rem; /* tăng mạnh */
+  margin-top: 0.7rem;
+}
+.rm-old-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+.rm-final-price {
+  color: #28a745;
+  font-weight: 800;
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+}
+.rm-discount-badge {
+  background: #28a745;
+  color: #fff;
+  font-size: 1rem;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+/* Check-in/out */
+.rm-checkin-wrapper {
+  margin-top: 1.2rem;
+}
+.rm-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.rm-input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.6rem;
+}
+
+/* Carousel image overlay title */
+.rm-carousel-title {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: #fff;
+  font-size: 1.6rem; /* tăng chữ trên ảnh */
+  font-weight: 700;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+.rm-desc {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+  max-height: 60px;        /* giới hạn chiều cao */
+  overflow: hidden;        /* ẩn phần dư */
+  text-overflow: ellipsis; /* dấu ... nếu dài */
+}
+

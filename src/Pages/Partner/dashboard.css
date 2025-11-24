@@ -1,0 +1,283 @@
+/* Optional thêm nếu không dùng Tailwind */
+.summary-table-container {
+  max-width: 800px;
+  margin: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background-color: white;
+}
+.summary-table-header {
+  background-color: #f9fafb;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.summary-table-row:hover {
+  background-color: #f3f4f6;
+}
+/* dashboard.css */
+.stat-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border-top-width: 4px;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h4 {
+  font-size: 1.5rem;
+  color: #6b7280; /* text-gray-500 */
+}
+
+.stat-card p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #16a34a; /* text-green-600 */
+}
+
+.commission-table-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin: 3rem auto;
+  border: 1px solid #e5e7eb;
+  max-width: 1200px;
+}
+
+.commission-table-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  background-color: #f9fafb;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.commission-empty {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.commission-table-wrapper {
+  overflow-x: auto;
+}
+
+.commission-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  color: #374151;
+}
+
+.commission-table-header {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.commission-table-header th {
+  padding: 12px 16px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.commission-table-row td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.commission-table-row:hover {
+  background-color: #f9fafb;
+  transition: background-color 0.2s;
+}
+
+.commission-amount {
+  font-weight: 600;
+  color: #16a34a; /* text-green-600 */
+  text-align: center;
+}
+.commission-pagination {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.pagination-btn {
+  background-color: #16a34a;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #15803d;
+}
+
+.pagination-btn:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+.btn-green {
+  background-color: #22c55e;
+  color: white;
+  padding: 0.55rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(34, 197, 94, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.dashboard-overview-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .dashboard-overview-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .metrics-section {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .chart-section {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+.partner-revenue {
+  font-weight: 600;
+  color: #1d4ed8; /* màu xanh blue đậm - bạn có thể đổi */
+  text-align: center;
+}
+/* Container */
+.hotel-report-container {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Title */
+.hotel-report-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #16a34a; /* xanh lá đậm */
+  margin-bottom: 1rem;
+}
+
+/* Empty state */
+.hotel-report-empty {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+/* Table */
+.hotel-report-table-wrapper {
+  overflow-x: auto;
+}
+
+.hotel-report-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.hotel-report-table thead {
+  background: #f0fdf4; /* xanh nhạt */
+}
+
+.hotel-report-table th {
+  text-align: left;
+  padding: 0.75rem;
+  font-weight: 600;
+  color: #065f46;
+  font-size: 15px;
+}
+
+.hotel-report-table td {
+  padding: 0.75rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 13px;
+}
+
+.hotel-report-table tr:hover {
+  background: #f9fafb;
+}
+
+/* Highlight columns */
+.hotel-revenue {
+  color: #2563eb; /* xanh dương */
+  font-weight: 600;
+}
+
+.final-revenue {
+  color: #dc2626; /* đỏ */
+  font-weight: 600;
+}
+
+/* Pagination */
+.hotel-report-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.pagination-btn {
+  background: #16a34a;
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pagination-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: 0.9rem;
+  color: #374151;
+}

@@ -1,0 +1,825 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  background: #f5f7fa;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* ===== Header ===== */
+.blog-header {
+  position: static;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #e74c3c, #e74c3c);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeDown 0.8s ease;
+}
+
+.blog-header h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.blog-header p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Animation */
+@keyframes fadeDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* ===== Form ===== */
+.blog-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.blog-form input,
+.blog-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.blog-form input:focus,
+.blog-form textarea:focus {
+  border-color: #3498db;
+}
+
+.blog-form .error {
+  border: 1px solid red;
+}
+
+.error-text {
+  color: red;
+  font-size: 13px;
+}
+
+.upload-btn {
+  background: #e67e22;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: #d35400;
+}
+
+.preview-img {
+  margin-top: 10px;
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.submit-btn {
+  background: #27ae60;
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #219150;
+}
+
+/* ===== Articles Grid ===== */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* ===== Card ===== */
+.article-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== Card Image ===== */
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: transform 0.4s ease;
+}
+
+.card-image img:hover {
+  transform: scale(1.08) rotate(1deg);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-image:hover .image-overlay {
+  opacity: 1;
+}
+
+/* ===== Card Body ===== */
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.card-body p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* ===== Footer ===== */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-date {
+  font-size: 13px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ===== Delete Button ===== */
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+}
+
+/* ===== Zoom Overlay ===== */
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.zoom-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.detail-btn {
+  padding: 5px 10px;
+  background: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.detail-btn:hover {
+  background: #138496;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.zoom-container {
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.blog-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.blog-header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.blog-header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Tabs đẹp */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.tab-btn {
+  padding: 10px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tab-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Card bài viết đẹp */
+.article-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.article-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.article-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 8px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card-image:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Nội dung card */
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.card-date {
+  font-size: 13px;
+  color: #777;
+}
+
+.card-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.detail-btn {
+  background: #2575fc;
+  color: white;
+}
+
+.detail-btn:hover {
+  background: #1a5fd6;
+}
+
+.delete-btn {
+  background: #ff4d4d;
+  color: white;
+  margin-left: 6px;
+}
+
+.delete-btn:hover {
+  background: #e60000;
+}
+
+/* Zoom overlay */
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.zoom-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.ai-blog {
+  padding: 16px;
+  border: 1px dashed #ddd;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.ai-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.thumbs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.thumb-card {
+  position: relative;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.thumb-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+}
+
+.progress .bar {
+  background: #eee;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.progress .bar-inner {
+  height: 8px;
+  border-radius: 4px;
+  background: #ff9800;
+}
+
+.blog-preview {
+  margin-top: 16px;
+}
+
+.blog-render {
+  line-height: 1.7;
+}
+
+.blog-render h2 {
+  margin: 16px 0 8px;
+}
+
+.blog-img {
+  margin: 12px 0;
+  text-align: center;
+}
+
+.blog-img img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.blog-img figcaption {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.raw-text pre {
+  white-space: pre-wrap;
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}.preview-container {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.preview-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.preview-multi-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.preview-thumb {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.preview-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-index {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+.preview-multi-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.preview-thumb {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.preview-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-index {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+/* Container hiển thị nhiều ảnh */
+.preview-multi-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;          /* khoảng cách giữa các ảnh */
+  margin-top: 8px;
+}
+
+/* Thumbnail từng ảnh */
+.preview-thumb {
+  position: relative;
+  width: 100px;      /* bạn có thể tăng/giảm */
+  height: 100px;     /* đảm bảo vuông */
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  flex-shrink: 0;    /* tránh bị co khi container nhỏ */
+}
+
+/* Ảnh bên trong thumbnail */
+.preview-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* đảm bảo ảnh đầy thumbnail, không méo */
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover hiệu ứng phóng to nhẹ */
+.preview-thumb img:hover {
+  transform: scale(1.05);
+}
+
+/* Chỉ số ảnh (nếu muốn) */
+.preview-index {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* Responsive: khi container nhỏ, ảnh co theo */
+@media (max-width: 500px) {
+  .preview-thumb {
+    width: 70px;
+    height: 70px;
+  }
+}
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.blog-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.blog-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.blog-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-images img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.blog-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blog-content h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.blog-content p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.blog-meta {
+  font-size: 0.85rem;
+  color: #888;
+  display: flex;
+  gap: 10px;
+}
+.preview-thumb {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.remove-thumb {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+}
+.blog-render p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.blog-render h2 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.blog-img {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.blog-img img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.blog-img figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.3rem;
+}

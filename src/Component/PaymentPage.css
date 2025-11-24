@@ -1,0 +1,186 @@
+.payment-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+.payment-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #34495e;
+}
+
+.booking-list {
+  margin-bottom: 20px;
+}
+.deposit-input {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #d1d5db; /* xám nhạt */
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #111827;
+  outline: none;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover (khi không disabled) */
+.deposit-input:hover:not(:disabled) {
+  border-color: #3b82f6; /* xanh primary */
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15);
+}
+
+/* Focus (khi không disabled) */
+.deposit-input:focus:not(:disabled) {
+  border-color: #2563eb; /* xanh đậm hơn */
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* Disabled */
+.deposit-input:disabled {
+  background-color: #f3f4f6; /* xám nhạt */
+  color: #9ca3af;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.booking-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.booking-info {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.booking-info i {
+  color: #3498db;
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.booking-price {
+  color: #27ae60;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.total-section {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+.total-section i {
+  margin-right: 8px;
+}
+
+.deposit-input {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.deposit-input:focus {
+  border-color: #3498db;
+}
+
+.paypal-wrapper {
+  margin-bottom: 20px;
+}
+
+.go-back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #95a5a6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.go-back-btn i {
+  margin-right: 8px;
+}
+
+.go-back-btn:hover {
+  background-color: #7f8c8d;
+}
+.booking-price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 14px;
+}
+
+.discounted-price {
+  color: #e60023; /* Màu đỏ nổi bật */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.discount-badge {
+  background-color: #ff4d4f;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.normal-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+}

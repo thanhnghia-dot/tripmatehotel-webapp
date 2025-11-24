@@ -1,0 +1,106 @@
+.partner-sidebar .nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  color: #333;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.partner-sidebar .nav a:hover,
+.partner-sidebar .nav .active {
+  background-color: #e6f4ea;
+  color: #16a34a;
+}
+/* Partner.css */
+
+.partner-layout {
+  font-size: 16px; /* To hơn bình thường 14px */
+}
+
+.partner-header-title {
+  font-size: 24px;
+}
+
+.partner-sidebar h6 {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.partner-sidebar .nav-link {
+  font-size: 16px;
+}
+
+.partner-welcome {
+  font-size: 16px;
+}
+
+.partner-main {
+  font-size: 16px;
+}
+/* General layout */
+.partner-sidebar {
+  transition: all 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+
+.partner-sidebar:hover {
+  width: 260px;
+}
+
+/* Sidebar links */
+.partner-sidebar .nav li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #1f2937; /* text-gray-800 */
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.partner-sidebar .nav li a:hover,
+.partner-sidebar .nav li a.active {
+  background-color: #22c55e; /* green-500 */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+
+
+header button {
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+header button:hover {
+  background-color: #fef3c7; /* soft yellow */
+  color: #16a34a;
+}
+
+/* Main content */
+main {
+  min-height: calc(100vh - 64px);
+  background-color: #f3f4f6; /* gray-100 */
+  border-radius: 12px;
+}
+
+/* Sidebar scroll for mobile */
+@media (max-width: 992px) {
+  .partner-sidebar {
+    position: fixed;
+    left: -260px;
+    top: 64px;
+    height: calc(100vh - 64px);
+    z-index: 999;
+  }
+
+  .partner-sidebar.active {
+    left: 0;
+  }
+}

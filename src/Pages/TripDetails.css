@@ -1,0 +1,1197 @@
+/* Container */
+
+
+
+
+.cancel-modal-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #d9534f; /* đỏ nổi bật */
+}
+.cancel-modal-note {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Quick links */
+.trip-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.trip-links a {
+  padding: 12px 24px;
+  border-radius: 24px;
+  text-decoration: none;
+  background-color: #e74c3c;
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.trip-links a:hover {
+  background-color: #c0392b;
+}
+
+/* Center text */
+.center {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Error Message */
+.error {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Form Styles */
+form .form-control {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+form .form-control:focus {
+  border-color: #e74c3c;
+  outline: none;
+  box-shadow: 0 0 4px rgba(231, 76, 60, 0.4);
+}
+
+form .text-danger {
+  color: #e74c3c;
+  font-size: 14px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-primary {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b;
+}
+
+.btn-secondary {
+  background-color: #aaa;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #888;
+}
+
+.btn-info {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+.btn-info:hover {
+  background-color: #e67e22;
+}
+
+/* Alert */
+.alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+/* Member List */
+.list-group-item {
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.card.border-primary {
+  border: 2px solid #64011d;
+  box-shadow: 0 0 12px rgba(109, 0, 16, 0.3);
+}
+/* Container nút hành động */
+.action-buttons-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+/* Các nút chung */
+.action-buttons-horizontal .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Nút danger (Book/Assign Hotel) */
+.action-buttons-horizontal .btn-danger {
+  background-color: #d9534f;
+  border: none;
+  color: #fff;
+}
+.action-buttons-horizontal .btn-danger:hover {
+  background-color: #c9302c;
+}
+
+/* Nút primary (Start Trip) */
+.action-buttons-horizontal .btn-primary {
+  background-color: #0275d8;
+  border: none;
+  color: #fff;
+}
+.action-buttons-horizontal .btn-primary:hover {
+  background-color: #025aa5;
+}
+
+/* Nút finish trip nổi bật */
+.btn-finish-trip {
+  background: linear-gradient(135deg, #34c759, #28a745); /* xanh lá chuyên nghiệp */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hover effect */
+.btn-finish-trip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #28a745, #20b038);
+}
+
+/* Active effect (nhấn nút) */
+.btn-finish-trip:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Disabled state */
+.btn-finish-trip:disabled {
+  background: #94d3a2; /* màu nhạt hơn */
+  cursor: not-allowed;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+
+/* Nút outline (Manage Members) */
+.action-buttons-horizontal .btn-outline-secondary {
+  background-color: transparent;
+  border: 2px solid #6c757d;
+  color: #6c757d;
+}
+.action-buttons-horizontal .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* Thông báo phòng chưa thanh toán */
+.action-buttons-horizontal .text-danger {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #d9534f;
+  background-color: #f8d7da; /* nền đỏ nhạt */
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+
+.step .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 40px;
+  background-color: #ccc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.step .label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Các trạng thái màu */
+.step.completed .circle {
+  background-color: #28a745; /* Xanh lá Completed */
+}
+
+.step.ongoing .circle {
+  background-color: #ffc107; /* Vàng Ongoing */
+}
+
+.step.current .circle {
+  background-color: #0d6efd; /* Xanh dương Planning (hiện tại) */
+}
+
+.step.upcoming .circle {
+  background-color: #adb5bd; /* Xám bước chưa đến */
+}
+
+/* Thanh nối giữa các bước */
+.connector {
+  height: 4px;
+  flex: 1;
+  background-color: #dee2e6;
+  margin: 0 8px;
+}
+/* TripMembers.css */
+.trip-members {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(166, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.trip-members__title {
+  text-align: center;
+  color: #003366;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.trip-members__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trip-members__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.trip-members__status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.trip-members__name {
+  font-weight: normal;
+  color: #888;
+}
+
+.trip-members__name--active {
+  font-weight: bold;
+  color: #000;
+}
+
+.trip-members__role {
+  display: block;
+  font-size: 12px;
+  color: #666;
+}
+.cancel-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.cancel-modal-content {
+  background: #fff;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.cancel-modal-title {
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #d9534f; /* đỏ nổi bật */
+  text-align: center;
+}
+
+.cancel-modal-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.custom-checkbox {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+  color: #333;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: background 0.3s, border 0.3s;
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+  background-color: #f0f0f0;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.cancel-modal-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.cancel-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cancel-modal-buttons .btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+.trip-payment-wrapper {
+  display: flex;
+  justify-content: center; /* căn giữa nút */
+  margin: 20px 0;
+}
+
+.trip-pay-btn {
+  background: linear-gradient(135deg, #89d6f2, #07a8f9); /* gradient bắt mắt */
+  color: #fff;
+  font-size: 19px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hover effect */
+.trip-pay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #03cbee, #04abed);
+}
+
+/* Active effect (nhấn nút) */
+.trip-pay-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Optional: thêm icon 💳 trước text */
+.trip-pay-btn::before {
+  content: "💳";
+  font-size: 18px;
+}
+
+.trip-hotel-info {
+  margin-top: 24px;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.hotel-title {
+  margin-bottom: 12px;
+  color: #1f2937;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 16px;
+  color: #374151;
+}
+
+.hotel-grid strong {
+  color: #111827;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hotel-cancel-message {
+  font-size: 16px;
+  color: #b91c1c;
+  font-weight: 500;
+  margin-top: 8px;
+}
+/* === Card chính === */
+.triproom-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  font-size: 18px;
+}
+
+.triproom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* === Status Badge === */
+.badge-status {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+}
+
+.badge-paid {
+  background-color: #28a745; /* xanh lá chuyên nghiệp */
+}
+
+.badge-unpaid {
+  background-color: #dc3545; /* đỏ nổi bật */
+}
+
+/* === Card Body === */
+.card-body {
+  padding: 20px;
+}
+
+
+
+.mainhotel-card {
+  font-size: 30px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 15px;
+}
+.main-hotel {
+  margin-bottom: 30px;
+}
+.room-price {
+  font-size: 22px;
+  font-weight: 1000;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.room-details p {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+/* === Checkbox === */
+.form-check-input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #007bff;
+  transition: all 0.2s ease;
+}
+
+.form-check-input:disabled {
+  cursor: not-allowed;
+}
+
+.form-check-label {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* === Cancel Button === */
+.cancel-booking-btn,
+.cancel-btn {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 0;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #f7bec3, #ee3450);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.cancel-booking-btn:hover,
+.cancel-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* === Responsive text === */
+
+.review-card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.review-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 450px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.review-card-pending {
+  border-left: 5px solid #28a745; /* màu xanh lá cho đánh giá mới */
+}
+
+.review-card-completed {
+  border-left: 5px solid #17a2b8; /* màu xanh dương cho đã đánh giá */
+}
+
+.review-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.review-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.review-btn {
+  padding: 10px 25px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.review-btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.review-btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.review-btn-secondary {
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #ced4da;
+}
+
+.review-btn-secondary:hover {
+  background-color: #e2e6ea;
+}
+/* Container */
+.trip-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+/* Title */
+.trip-title {
+  text-align: center;
+  color: #c0392b; /* đỏ đậm */
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* Info Grid */
+.trip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* Quick links */
+.trip-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.trip-links a {
+  padding: 12px 24px;
+  border-radius: 24px;
+  text-decoration: none;
+  background-color: #e74c3c;
+  color: #fff;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.trip-links a:hover {
+  background-color: #c0392b;
+}
+
+/* Center text */
+.center {
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Error Message */
+.error {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Form Styles */
+form .form-control {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+form .form-control:focus {
+  border-color: #e74c3c;
+  outline: none;
+  box-shadow: 0 0 4px rgba(231, 76, 60, 0.4);
+}
+
+form .text-danger {
+  color: #e74c3c;
+  font-size: 14px;
+}
+
+/* Uniform Buttons */
+.btn-uniform {
+  min-width: 180px;          /* tất cả nút ít nhất rộng 180px */
+  height: 48px;              /* chiều cao đồng bộ */
+  padding: 0 16px;           /* padding ngang */
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+
+  display: inline-flex;       /* icon + text thẳng hàng */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;                   /* khoảng cách giữa icon và text */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Nếu nằm trong nhóm hành động ngang */
+.action-buttons-horizontal .btn-uniform {
+  flex: 1;                   /* chia đều không gian */
+  max-width: 200px;          /* không quá rộng */
+}
+
+/* Alert */
+.alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+/* Member List */
+.list-group-item {
+  background: #fafafa;
+  border: 1px solid #eee;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.card.border-primary {
+  border: 2px solid #64011d;
+  box-shadow: 0 0 12px rgba(109, 0, 16, 0.3);
+}
+.action-buttons-horizontal {
+  display: flex;
+  flex-wrap: wrap; /* xuống dòng khi quá rộng */
+  justify-content: center; /* căn giữa các nút */
+  gap: 12px;
+}
+
+.action-buttons-horizontal button {
+  min-width: 160px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+transition: all 0.2s ease;
+}
+
+.action-buttons-horizontal button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.step .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 40px;
+  background-color: #ccc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.step .label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Các trạng thái màu */
+.step.completed .circle {
+  background-color: #28a745; /* Xanh lá Completed */
+}
+
+.step.ongoing .circle {
+  background-color: #ffc107; /* Vàng Ongoing */
+}
+
+.step.current .circle {
+  background-color: #0d6efd; /* Xanh dương Planning (hiện tại) */
+}
+
+.step.upcoming .circle {
+  background-color: #adb5bd; /* Xám bước chưa đến */
+}
+
+/* Thanh nối giữa các bước */
+.connector {
+  height: 4px;
+  flex: 1;
+  background-color: #dee2e6;
+  margin: 0 8px;
+}
+/* TripMembers.css */
+.trip-members {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(166, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.trip-members__title {
+  text-align: center;
+  color: #003366;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.trip-members__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trip-members__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.trip-members__status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.trip-members__name {
+  font-weight: normal;
+  color: #888;
+}
+
+.trip-members__name--active {
+  font-weight: bold;
+  color: #000;
+}
+
+.trip-members__role {
+  display: block;
+  font-size: 12px;
+  color: #666;
+}
+.hotelcard-body {
+  padding: 2rem; /* giống p-4 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 14px;
+}
+
+/* Room title */
+.room-title {
+  font-size: 2.1rem;       /* To hơn normal */
+  font-weight: 700;          /* Bold */
+  color: #0d6efd;           /* Xanh nổi bật */
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1); /* Nhẹ nổi bật */
+  transition: color 0.3s ease;
+}
+.room-title:hover {
+  color: #0056b3;           /* Hover đậm hơn */
+  cursor: pointer;
+}
+/* Hotel name */
+.hotel-name {
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: italic;       /* Nhẹ nhàng */
+  color: #0b0b0b;           /* Màu xám trung tính */
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.3s ease;
+}
+
+.hotel-name:hover {
+  color: #495057;           /* Hover tối hơn, gợi click */
+  cursor: pointer;
+}
+
+/* Room price */
+.hotelcard-body .room-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0ced53;
+  margin-bottom: 0.5rem;
+}
+.pay-deposit {
+  background-color: #0d6efd; /* Xanh dương tiêu chuẩn */
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pay-deposit:hover {
+  background-color: #0056b3; /* Hover đậm hơn */
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.pay-deposit:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+/* Wrapper section */
+.hotel-room-wrapper {
+  padding: 2rem 1rem;
+  background-color: #f8f9fa; /* nhẹ nhàng, sáng */
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Section header */
+.hotel-room-header {
+  font-size: 3rem;          /* Nổi bật */
+  font-weight: 700;            /* Bold */
+  color: #130558;              /* Màu xanh chủ đạo */
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.hotel-room-header::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #0d6efd;
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
+.hotel-room-header:hover {
+  color: #0056b3;              /* Hover đậm hơn */
+  cursor: default;
+}
+.action-buttons-horizontal .btn {
+  margin: 0 !important;          /* bỏ margin thừa */
+  vertical-align: middle !important; /* căn giữa theo baseline */
+  line-height: 1.2 !important;   /* đồng bộ với các nút custom */
+  height: 48px;                  /* ép cùng chiều cao */
+  display: inline-flex;          
+  align-items: center;           
+  justify-content: center;       
+}
+/* Danger */
+.btn-danger-custom {
+  background-color: #d9534f;
+  color: #fff;
+}
+.btn-danger-custom:hover {
+  background-color: #c9302c;
+}
+
+/* Primary */
+.btn-primary-custom {
+  background-color: #0275d8;
+  color: #fff;
+}
+.btn-primary-custom:hover {
+  background-color: #025aa5;
+}
+
+/* Warning */
+.btn-warning-custom {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+.btn-warning-custom:hover {
+  background-color: #ec971f;
+}
+
+/* Success */
+.btn-success-custom {
+  background: linear-gradient(135deg, #34c759, #28a745);
+  color: #fff;
+}
+.btn-success-custom:hover {
+  background: linear-gradient(135deg, #28a745, #20b038);
+}
+
+/* Outline */
+.btn-outline-custom {
+  border: 2px solid #6c757d;
+  background: transparent;
+  color: #6c757d;
+}
+.btn-outline-custom:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+/* Container chung căn giữa */
+.book-room-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* Cảnh báo căn giữa */
+.unpaid-warning-box {
+  background: #fff5f5;
+  border: 1px solid #f5c2c7;
+  border-left: 6px solid #dc3545;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 450px;
+  text-align: left;
+}
+
+.unpaid-warning-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #b02a37;
+  margin: 0;
+}
+
+/* Nút thống nhất */
+.btn-uniform {
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: none;
+  min-width: 220px; /* giữ nút nhìn cân đối */
+  text-align: center;
+}
+
+.btn-danger-custom {
+  background: linear-gradient(135deg, #e53935, #b71c1c);
+  color: #fff;
+}
+
+.btn-danger-custom:hover:enabled {
+  background: linear-gradient(135deg, #f44336, #c62828);
+}
+
+.btn-danger-custom:disabled {
+  background: #e6e6e6;
+  color: #999;
+  cursor: not-allowed;
+}
+

@@ -1,0 +1,750 @@
+/* Wrapper: chứa cả 2 cột */
+.mm-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #f5f7fa;
+  height: calc(100vh - 40px); /* full chiều cao màn hình trừ header */
+  align-items: stretch;       /* 👈 ép 2 cột bằng chiều cao */
+}
+
+/* Chat box */
+.mm-chat-box {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;         /* bo tròn */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  height: 100%;
+  position: relative;          /* để chuông làm gốc tọa độ */
+  overflow: visible;           /* dropdown không bị cắt */
+}
+
+.mm-chat-header {
+  background: linear-gradient(135deg, #0078d4, #00b4d8);
+  color: #fff;
+  padding: 14px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;          /* 👈 dropdown sẽ bám vào header */
+}
+
+/* Khung tin nhắn */
+.mm-chat-messages {
+  flex: 1;
+  overflow-y: auto;            /* chỉ phần này được cuộn */
+  padding: 12px;
+  background: #fafafa;
+}
+
+/* Dropdown thông báo */
+.notification-dropdown {
+  position: absolute;
+  top: 100%;        /* ngay dưới header */
+  right: 0;
+  margin-top: 8px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  width: 300px;
+  max-height: 360px;
+  overflow-y: auto;
+  z-index: 1200;
+}
+
+/* Tin nhắn */
+.mm-message {
+  display: flex;
+  margin-bottom: 12px;
+  animation: fadeIn 0.25s ease;
+}
+
+.mm-message-left {
+  justify-content: flex-start;
+}
+
+.mm-message-right {
+  justify-content: flex-end;
+}
+
+.mm-message-content {
+  color: #000;
+  border-radius: 12px;
+  padding: 6px;
+  max-width: 80%;
+}
+
+.mm-bubble {
+  padding: 10px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.mm-message-left .mm-bubble {
+  background-color: #f1f1f1;
+  border-top-left-radius: 0;
+  color: #333;
+}
+
+.mm-message-right .mm-bubble {
+  background-color: #0078d4;
+  border-top-right-radius: 0;
+  color: #fff;
+}
+
+.mm-avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  margin-right: 8px;
+  align-self: flex-end;
+}
+
+.mm-sender-name {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 2px;
+  color: #333;
+}
+
+.mm-message-left .mm-sender-name {
+  display: block;
+  color: #0078d4;
+}
+
+.mm-message-right .mm-sender-name {
+  display: none;
+}
+
+.mm-timestamp {
+  font-size: 11px;
+  color: #888;
+  margin-top: 4px;
+  align-self: flex-end;
+}
+
+/* Hiệu ứng fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Input chat */
+.mm-chat-input {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #eee;
+  background: #fff;
+  flex-shrink: 0; /* không co lại */
+}
+.mm-chat-input input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 24px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.mm-chat-input input:focus {
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
+}
+
+.mm-chat-input button {
+  background: linear-gradient(135deg, #0078d4, #00b4d8);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.mm-chat-input button:hover {
+  opacity: 0.9;
+}
+
+/* Quản lý thành viên */
+.mm-manage-card {
+  flex: 1;                          /* hẹp hơn Chat box */
+  display: flex;
+  flex-direction: column;
+  height: 100%;                     /* 👈 luôn full chiều cao */
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+}
+
+.mm-manage-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 8px;
+}
+
+.mm-manage-card input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.mm-manage-card button {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 24px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mm-manage-card button:hover {
+  background-color: #c9302c;
+}
+
+/* Danh sách thành viên */
+.mm-list-group {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 12px;
+}
+
+.mm-list-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+.mm-list-item:hover {
+  background: #f9f9f9;
+}
+
+.mm-current-user {
+  background-color: #f1f9ff;
+  border-left: 4px solid #0078d4;
+}
+
+/* Thanh tìm kiếm */
+.mm-search-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 6px 12px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.mm-search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+.mm-search-box:focus-within {
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+}
+
+/* Modal */
+.modal-content1 {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.modal-content1 h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.modal-content1 form div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  transition: background-color 0.2s ease;
+}
+
+.modal-content1 form div:hover {
+  background: #f1f1f1;
+}
+
+.modal-content1 input[type="radio"] {
+  accent-color: #e74c3c;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.modal-content1 label {
+  margin-left: 8px;
+  font-size: 15px;
+  color: #444;
+  cursor: pointer;
+}
+
+.modal-content1 textarea {
+  margin-top: 8px;
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.modal-content1 textarea:focus {
+  border-color: #e74c3c;
+  outline: none;
+  box-shadow: 0 0 4px rgba(231,76,60,0.3);
+}
+
+.modal-content1 .btn {
+  min-width: 120px;
+  font-weight: 600;
+}
+.equal-btn {
+  flex: 1;             /* Chia đều không gian */
+  min-width: 0;        /* Đảm bảo không bị fix theo text */
+  text-align: center;  /* Căn giữa text */
+  padding: 10px 0;     /* Đảm bảo padding trên dưới đều */
+}
+.modal-btn-group {
+  display: flex;
+  gap: 12px;                  /* khoảng cách vừa phải */
+  margin-top: 1.5rem;
+}
+
+.modal-btn {
+  flex: 1;                    /* chiếm đều không gian */
+  padding: 10px 0;            /* nút cao hơn, thoáng hơn */
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;         /* bo góc mềm mại */
+  transition: all 0.2s ease;  /* hiệu ứng hover mượt */
+}
+
+/* Nút Cancel */
+.modal-btn-cancel {
+  background-color: #6c757d;  /* xám */
+  color: #fff;
+  border: none;
+}
+.modal-btn-cancel:hover {
+  background-color: #5a6268;
+}
+
+/* Nút Confirm - trạng thái chung */
+.modal-btn-confirm {
+  border: none;
+  color: #fff;
+}
+.modal-btn-confirm:hover {
+  filter: brightness(0.9);
+}
+
+/* Confirm màu xanh khi approve */
+.modal-btn-approve {
+  background-color: #007bff;
+}
+.modal-btn-approve:hover {
+  background-color: #0069d9;
+}
+
+/* Confirm màu đỏ khi reject */
+.modal-btn-reject {
+  background-color: #dc3545;
+}
+.modal-btn-reject:hover {
+  background-color: #c82333;
+}
+/* Khi user bị pending leave request -> lock toàn bộ màn hình */
+.mm-locked-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 40px);
+  background: linear-gradient(135deg, #f5f7fa, #eaf4ff);
+  padding: 20px;
+}
+
+.mm-locked-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  padding: 32px 24px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.mm-locked-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0078d4;
+}
+
+.mm-locked-card p {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.mm-locked-card button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #0078d4, #00b4d8);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.mm-locked-card button:hover {
+  opacity: 0.9;
+}
+
+.mm-locked-card small {
+  display: block;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #888;
+}
+/* Popup cuộc gọi đến */
+.call-incoming-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: slideIn 0.3s ease-out;
+  font-family: Arial, sans-serif;
+}
+
+/* Tiêu đề */
+.call-incoming-popup h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Tên người gọi */
+.call-incoming-popup .caller-name {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Nhóm nút */
+.call-incoming-popup .popup-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Nút chung */
+.call-incoming-popup button {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+/* Accept */
+.call-incoming-popup .btn-accept {
+  background: #2ecc71;
+  color: #fff;
+}
+.call-incoming-popup .btn-accept:hover {
+  background: #27ae60;
+}
+
+/* Decline */
+.call-incoming-popup .btn-decline {
+  background: #e74c3c;
+  color: #fff;
+}
+.call-incoming-popup .btn-decline:hover {
+  background: #c0392b;
+}
+
+/* Hiệu ứng slide in */
+@keyframes slideIn {
+  from {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.msg-actions {
+  position: relative;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.msg-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+.msg-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+  min-width: 120px;
+}
+
+.msg-dropdown div {
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.msg-dropdown div:hover {
+  background: #f5f5f5;
+}
+
+.mm-pinned-messages {
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+.pinned-item {
+  margin-top: 4px;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+.msg-dropdown {
+  position: absolute;
+  right: 0;
+  background: #fff !important;   /* nền trắng */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1500;
+  min-width: 120px;
+}
+
+.msg-dropdown div {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #000 !important;       /* chữ đen */
+  cursor: pointer;
+}
+
+.msg-dropdown div:hover {
+  background: #f5f5f5;
+}
+.mm-msg-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+.msg-actions {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.mm-msg-row:hover .msg-actions {
+  opacity: 1;
+}
+
+.msg-actions button {
+  background: #f1f1f1;          /* nền xám nhạt mặc định */
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;           /* bo tròn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;                  /* màu icon */
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Khi hover chỉ đổi màu nền nhẹ */
+.msg-actions button:hover {
+  background: #e0e0e0;          /* nền đậm hơn chút */
+  color: #000;                  /* icon đen rõ hơn */
+}
+.pinned-item {
+  background: #fffbe6;       /* nền vàng nhạt */
+  border: 1px solid #ffecb3; /* viền vàng nhạt */
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin-bottom: 8px;        /* khoảng cách giữa các ô */
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pinned-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.pinned-item .mm-sender-name {
+  font-weight: 600;
+  color: #0078d4;
+  font-size: 13px;
+}
+
+.pinned-item .mm-bubble {
+  background: #fff8c4;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: #333;
+}
+.pinned-toggle-btn {
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #0078d4;
+  border: 1px solid #ffecb3;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.pinned-toggle-btn:hover {
+  background-color: #0078d4;
+  transform: translateY(-1px);
+}
+.mm-pinned-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+.system-message { /* style system bubble */
+  text-align: center;
+}
+
+.system-message .system-bubble { /* nếu muốn tách class */
+  /* styles handled inline above; thêm vào đây nếu muốn */
+}
+
+.highlighted {
+  background: rgba(254,243,199,0.95); /* vàng nhạt highlight */
+  transition: background-color 1s ease;
+  border-radius: 8px;
+}
+/* backdrop tối nền */
+.nmodal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* nội dung modal */
+.nmodal-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  animation: nmodalFadeIn 0.3s ease-out;
+}
+
+/* title */
+.nmodal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* từng option radio */
+.nmodal-option {
+  margin-bottom: 8px;
+}
+
+/* textarea */
+.nmodal-textarea {
+  width: 100%;
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* nút */
+.nmodal-actions button {
+  min-width: 100px;
+}
+
+/* animation */
+@keyframes nmodalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.mm-system-message {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+  margin: 8px 0;
+}

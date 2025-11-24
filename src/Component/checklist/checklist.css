@@ -1,0 +1,316 @@
+/* ===== Theme màu nền gradient ===== */
+:root {
+  --c-gradient: linear-gradient(to bottom, #e6f9f6, #fcefb4); /* xanh nhạt -> vàng nhạt */
+  --c-border: #d9d9d9;
+  --c-text: #2c3e50;
+  --c-muted: #95a5a6;
+  --c-primary: #009688;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Áp dụng chung cho form/section/table */
+.checklist-form,
+.checklist-section,
+.member-section,
+.summary-section {
+  background: var(--c-gradient);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* Input + select */
+.checklist-input {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1.5px solid var(--c-border);
+  background: #fff;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.checklist-input:focus {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 2px rgba(0,150,136,0.25);
+}
+
+/* Button */
+.checklist-btn {
+  background: var(--c-primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.checklist-btn:hover {
+  background: #00796b;
+}
+.checklist-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Table */
+.checklist-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+.checklist-table th,
+.checklist-table td {
+  border: 1px solid var(--c-border);
+  padding: 8px 10px;
+  text-align: left;
+}
+.checklist-table th {
+  background: rgba(255,255,255,0.5);
+  font-weight: 600;
+}
+
+/* Member card mặc định */
+.member-card {
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transition: all .25s ease;
+  color: var(--c-text); /* ✅ chữ luôn hiện rõ */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+/* Danh sách member dạng grid 2 cột */
+.member-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+
+/* Avatar */
+.member-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--c-primary); /* xanh ngọc biển */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Hover effect: vibe du lịch */
+.member-card:hover {
+  background: linear-gradient(135deg, #e0f7fa, #fff3cd); /* xanh biển nhạt → vàng pastel */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  color: var(--c-text); /* giữ chữ luôn rõ */
+}
+
+/* Khi chọn */
+.member-card.active {
+  border-color: var(--c-primary);
+  background: #e6f9f6; /* nền xanh nhạt */
+  box-shadow: 0 0 0 3px rgba(0,150,136,0.2);
+  color: var(--c-text);
+}
+
+/* Tên và số item */
+.member-name {
+  font-weight: 600;
+  color: var(--c-text);
+}
+.member-items {
+  font-size: 13px;
+  color: var(--c-muted);
+}
+
+/* Add Item section phủ gradient toàn bộ box */
+.additem-section {
+  background: var(--c-gradient);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  min-height: 100%; /* ✅ đảm bảo gradient bao trọn chiều cao */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form trắng nằm nổi bên trong */
+.checklist-form {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1.5px solid var(--c-border);
+  width: 100%;
+}
+
+/* Trip Budget highlight */
+.trip-budget {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f766e; /* xanh ngọc đậm */
+  margin-bottom: 12px;
+  background: #ecfdf5; /* nền xanh pastel */
+  padding: 6px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+
+/* ======================
+   SUMMARY TABLE HEADER
+====================== */
+.summary-section .checklist-table th {
+  background: linear-gradient(90deg, #a7f3d0, #bae6fd); /* xanh pastel → xanh biển nhạt */
+  color: #1e3a8a; /* xanh navy */
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px;
+  letter-spacing: 0.3px;
+}
+.summary-section .checklist-table td {
+  text-align: center;
+  background: #fff;
+  font-size: 13px;
+  color: var(--c-text);
+  padding: 8px;
+}
+.summary-section .checklist-table tr:nth-child(even) td {
+  background: #f9fafb; /* xen kẽ */
+}
+
+/* ======================
+   SUMMARY CARDS - pastel style
+====================== */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.summary-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1.5px solid #e2e8f0;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.summary-label {
+  font-size: 13px;
+  color: var(--c-muted);
+  margin-bottom: 4px;
+}
+.summary-value {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--c-primary);
+}
+
+/* ======================
+   CHECKLIST ITEMS TABLE
+====================== */
+.checklist-section .checklist-table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  font-size: 14px;
+}
+
+/* Header nổi bật với gradient */
+.checklist-section .checklist-table th {
+  background: linear-gradient(90deg, #fef3c7, #fde68a); /* vàng pastel */
+  color: #374151; /* text xám đậm */
+  text-align: center;
+  font-weight: 600;
+  padding: 10px;
+  font-size: 13px;
+}
+
+/* Body */
+.checklist-section .checklist-table td {
+  padding: 10px 12px;
+  text-align: center;
+  color: var(--c-text);
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.checklist-section .checklist-table tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+/* Ô trống */
+.checklist-empty {
+  text-align: center;
+  font-style: italic;
+  color: var(--c-muted);
+  padding: 16px;
+}
+
+/* Input price nhỏ gọn */
+.checklist-input--small {
+  height: 34px;
+  width: 100px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: 1.5px solid var(--c-border);
+  padding: 4px 8px;
+}
+.checklist-input--small:focus {
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 2px rgba(0,150,136,0.25);
+}
+
+/* Status badge */
+.checklist-status {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+.status-pending {
+  background: #fef9c3;
+  color: #854d0e;
+}
+.status-purchased {
+  background: #d1fae5;
+  color: #065f46;
+}
+.status-transferred {
+  background: #dbeafe;
+  color: #1e3a8a;
+}
+
+/* Actions button */
+.checklist-btn {
+  margin: 2px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+.transfer-btn {
+  background: #3b82f6;
+}
+.transfer-btn:hover {
+  background: #2563eb;
+}

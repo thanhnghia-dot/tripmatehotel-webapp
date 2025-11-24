@@ -1,0 +1,450 @@
+.home-page {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero-section {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-overlay p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.hero-button {
+  margin-top: 20px;
+  background-color: #780808;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #cfcdcd;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 12;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.features-section .col-md-3 {
+  margin-bottom: 30px;
+}
+
+.features-section i {
+  color: #380303;
+}
+
+.photo-grid img {
+  transition: transform 0.3s ease;
+}
+
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Popular Destinations Section */
+.destinations-section .destination-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.destinations-section .destination-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.destinations-section img {
+  width: 100%;
+  height: 450px; /* Tăng chiều cao ảnh để tránh quá dọc */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* To ensure even height for cards */
+.destinations-section .col-md-4 {
+  display: flex;
+}
+
+.testimonial-card {
+  background-color: #b1082f;
+  border-left: 4px solid #820505;
+  transition: transform 0.3s ease;
+  height: 200px; /* Chiều cao cố định cho card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-content {
+  font-size: 14px;
+  max-height: 80px; /* Giới hạn chiều cao nội dung */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Giới hạn tối đa 3 dòng */
+  -webkit-box-orient: vertical;
+  margin: 0;
+}
+
+.testimonial-username {
+  font-size: 16px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #820505; /* Hợp với viền testimonial-card */
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pagination-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.pagination-btn:not(:disabled):hover {
+  background-color: #a30606; /* Sáng hơn #820505 */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-number {
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.375rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  background-color: #f3f4f6; /* Xám nhạt, tương phản với #b1082f */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pagination-number:hover {
+  background-color: #e5e7eb; /* Xám sáng hơn */
+  transform: translateY(-1px);
+}
+
+.pagination-number.active {
+  background-color: #b1082f; /* Hợp với background testimonial-card */
+  color: white;
+  font-weight: 600;
+}
+.steps .step .circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.steps .step.active .circle {
+  background-color: #97464f; /* Red tone */
+  color: white;
+}
+
+.steps .label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.steps .step.active .label {
+  color: #dc3545;
+}
+.steps-container {
+  position: relative;
+  gap: 0.5rem;
+}
+
+.step {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.step .circle {
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.step.active .circle {
+  background-color: #dc3545;
+  color: white;
+}
+
+.label {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.connector {
+  flex: 0 0 40px;
+  height: 4px;
+  background: linear-gradient(to right, #999, #ccc);
+  position: relative;
+  top: -10px;
+  z-index: 1;
+}
+
+.connector::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: -6px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #ccc;
+}
+.step.active ~ .connector {
+  background: linear-gradient(to right, #dc3545, #f8d7da);
+}
+
+.step.active ~ .connector::after {
+  border-left-color: #dc3545;
+}
+.coverflow-swiper {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.coverflow-swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+/* 🌍 Public Trips Section */
+.public-trips-section {
+  padding: 3rem 0;
+  background: linear-gradient(to right, #f9fafc, #eef2f7);
+}
+
+.public-trips-section h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1d3557;
+  margin-bottom: 2rem;
+  text-align: left;
+  position: relative;
+}
+
+.public-trips-section h3::before {
+  content: "✈️";
+  margin-right: 10px;
+}
+
+.public-trip-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.public-trip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.public-trip-card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  transition: transform 0.4s ease;
+}
+
+.public-trip-card:hover img {
+  transform: scale(1.05);
+}
+
+.public-trip-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.public-trip-overlay:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.public-trip-card .card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.public-trip-card h6 {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #457b9d;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.public-trip-card p {
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.public-trip-card .btn {
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.public-trip-card .btn-outline-primary {
+  border: 2px solid #1d3557;
+  color: #1d3557;
+}
+
+.public-trip-card .btn-outline-primary:hover {
+  background: #1d3557;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Swiper Navigation Custom */
+.public-trips-section .swiper-button-next,
+.public-trips-section .swiper-button-prev {
+  color: #1d3557;
+  transition: transform 0.3s ease;
+}
+
+.public-trips-section .swiper-button-next:hover,
+.public-trips-section .swiper-button-prev:hover {
+  transform: scale(1.2);
+  color: #e63946;
+}

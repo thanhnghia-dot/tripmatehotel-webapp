@@ -1,0 +1,9 @@
+.checklist-page { padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.card { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+.checklist-form .row { display: flex; gap: 8px; flex-wrap: wrap; }
+.checklist-form input, .checklist-form select { padding: 8px; }
+.member-table table, .checklist-item-table table, .summary-table { width: 100%; border-collapse: collapse; }
+.member-table th, .member-table td,
+.checklist-item-table th, .checklist-item-table td,
+.summary-table td { border: 1px solid #eee; padding: 8px; }

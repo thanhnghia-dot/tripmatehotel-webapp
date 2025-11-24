@@ -1,0 +1,147 @@
+/* Container chính */
+.p-8 {
+  padding: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Bảng rộng full container, overflow scroll khi nhỏ */
+.overflow-auto {
+  overflow-x: auto;
+}
+/* Chỉ áp dụng cho bảng trong .hotel-table */
+.hotel-table-container {
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 2.5rem;
+}
+
+.hotel-table {
+  min-width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px; /* chữ to hơn */
+}
+
+.hotel-thead {
+  background-color: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+}
+
+.hotel-th-left {
+  text-align: left;
+  padding: 14px 20px;
+}
+
+.hotel-th-right {
+  text-align: right;
+  padding: 14px 20px;
+}
+
+.hotel-th-center {
+  text-align: center;
+  padding: 14px 20px;
+}
+
+.hotel-tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.3s ease;
+}
+
+.hotel-tbody tr:hover {
+  background-color: #d1fae5;
+}
+
+.hotel-td-left {
+  text-align: left;
+  padding: 12px 20px;
+}
+
+.hotel-td-right {
+  text-align: right;
+  padding: 12px 20px;
+}
+
+.hotel-td-center {
+  text-align: center;
+  padding: 12px 20px;
+}
+
+.hotel-tr {
+  /* thêm hover, cursor nếu muốn */
+}
+
+
+/* Canh text phải cho số */
+.text-right {
+  text-align: right;
+}
+
+/* Canh text trái */
+.text-left {
+  text-align: left;
+}
+
+/* Tiêu đề bảng */
+h2, h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #16a34a;
+}
+
+/* Responsive nhỏ màn hình */
+@media (max-width: 768px) {
+  thead tr {
+    display: none;
+  }
+  tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    white-space: normal;
+  }
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #374151;
+    flex-basis: 50%;
+    text-align: left;
+  }
+  
+}
+.btn-green {
+  background-color: #22c55e;
+  color: white;
+  padding: 0.55rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(34, 197, 94, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.filter-input {
+  flex: 1 1 300px;
+  padding: 0.5rem 1rem;
+  border: 2px solid #22c55e;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: #16a34a;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}

@@ -1,0 +1,344 @@
+/* Icon khóa */
+.tps-lock-icon {
+  font-size: 1.8rem;
+  padding: 6px;
+  border-radius: 50%;
+  transition: color 0.3s ease;
+}
+
+.tps-lock-icon.tps-private {
+  color: #dc3545;
+}
+
+.tps-lock-icon.tps-public {
+  color: #28a745;
+}
+
+.tps-lock-icon svg {
+  font-size: 18px;
+}
+
+.tps-visibility-text.tp-public {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.tps-visibility-text.tp-private {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* Page */
+.tps-trip-page {
+  font-family: 'Pacifico', cursive;
+}
+
+/* Tiêu đề chính */
+.tps-title-main {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  font-weight: 700;
+  font-size: 4rem;
+  color: #ff6f61;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Tiêu đề nhỏ */
+.tps-title-status {
+  font-family: 'Pacifico', cursive;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1.2px;
+}
+
+.tps-title-status.tps-planning {
+  color: #ffc107;
+}
+
+.tps-title-status.tps-ongoing {
+  color: #0d6efd;
+}
+
+.tps-title-status.tps-completed {
+  color: #198754;
+}
+
+/* Trip info */
+.tps-trip-info {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #333;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.tps-trip-info strong {
+  color: #d6336c;
+  font-weight: 700;
+  min-width: 85px;
+  display: inline-block;
+}
+
+.tps-trip-info span {
+  color: #555;
+}
+
+.tps-trip-info .tps-status {
+  font-weight: 700;
+}
+
+.tps-trip-info .tps-status.tps-planning {
+  color: #f0ad4e;
+}
+
+.tps-trip-info .tps-status.tps-ongoing {
+  color: #0275d8;
+}
+
+.tps-trip-info .tps-status.tps-completed {
+  color: #28a745;
+}
+
+.tps-trip-info .tps-visibility.tps-public {
+  color: #28a745;
+  font-weight: 700;
+}
+
+.tps-trip-info .tps-visibility.tps-private {
+  color: #dc3545;
+  font-weight: 700;
+}
+
+.tps-trip-info div:hover {
+  background-color: #f8f9fa;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Search + filter */
+.tps-search-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.tps-search-input {
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 2px solid #dc3545;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 250px;
+  max-width: 100%;
+  box-shadow: 0 2px 6px rgba(220, 53, 69, 0.3);
+}
+
+.tps-search-input::placeholder {
+  color: #dc3545aa;
+  font-style: italic;
+}
+
+.tps-search-input:focus {
+  border-color: #a71d2a;
+  box-shadow: 0 0 8px #a71d2acc;
+}
+
+.tps-filter-select {
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 2px solid #dc3545;
+  outline: none;
+  background: white;
+  cursor: pointer;
+  width: 180px;
+  max-width: 100%;
+  box-shadow: 0 2px 6px rgba(220, 53, 69, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+.tps-filter-select:focus {
+  border-color: #a71d2a;
+  box-shadow: 0 0 8px #a71d2acc;
+}
+
+.tps-filter-select option {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+/* Slider */
+.tps-trip-slider-container {
+  position: relative;
+}
+
+.tps-arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.95), rgba(230,230,230,0.8));
+  color: #333;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.tps-arrow-btn.tp-left {
+  left: 10px;
+}
+
+.tps-arrow-btn.tp-right {
+  right: 10px;
+}
+
+.tps-arrow-btn:hover {
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,1), rgba(240,240,240,1));
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.tps-trip-scroll-wrapper {
+  position: relative;
+  padding: 0 40px;
+}
+
+.tps-trip-scroll-wrapper::-webkit-scrollbar {
+  height: 2px;
+}
+
+.tps-trip-scroll-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tps-trip-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.tps-trip-info strong {
+  color: #000 !important;
+}
+/* Container nút */
+.trip-card-actions {
+  display: flex;
+  justify-content: space-between; /* Nút trái và phải cách đều */
+  align-items: center;
+  padding-bottom: 0.3rem; /* padding dưới nhỏ */
+  gap: 0.5rem;
+}
+
+/* Container nút bên phải */
+.trip-card-actions .action-right {
+  display: flex;
+  gap: 0.5rem; /* khoảng cách đều giữa các nút */
+}
+
+/* Base nút */
+.trip-btn,
+.delete-btn {
+  border-radius: 0; /* mặc định vuông */
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border: none;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Checklist - vàng */
+.checklist-btn {
+  background: linear-gradient(135deg, #ffc107, #ffca2c);
+  color: #000;
+}
+.checklist-btn:hover {
+  background: linear-gradient(135deg, #ffca2c, #ffc107);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+/* Details - xanh */
+.details-btn {
+  background: linear-gradient(135deg, #216b28, #138b2f);
+  color: #fff;
+}
+.details-btn:hover {
+  background: linear-gradient(135deg, #e4606d, #dc3545);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+/* Delete - xám đỏ */
+.delete-btn {
+  background: linear-gradient(135deg, #7b0000, #bf1b1b);
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.delete-btn:hover {
+  background: linear-gradient(135deg, #8e0000, #730000);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+/* ------------- RESET: ép mọi nút trong vùng này vuông ------------- */
+.trip-card-actions button,
+.trip-card-actions .btn {            /* bao gồm cả .btn (bootstrap) nếu có */
+  border-radius: 0 !important;
+}
+
+/* ------------- Quy định theo class (không dùng :first-child/:last-child) ------------- */
+/* Nút trái (Checklist) -> chỉ bo góc dưới trái */
+.trip-card-actions .checklist-btn {
+  border-radius: 0 !important;                 /* reset trước */
+  border-bottom-left-radius: 0.5rem !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* Nút phải (Details) -> chỉ bo góc dưới phải */
+.trip-card-actions .details-btn {
+  border-radius: 0 !important;                 /* reset trước */
+  border-bottom-right-radius: 0.5rem !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+/* Nút ở giữa (Delete hoặc nút trung gian) -> bắt buộc vuông */
+.trip-card-actions .delete-btn,
+.trip-card-actions button:not(.checklist-btn):not(.details-btn) {
+  border-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* Nếu bạn có 1 container .action-right chứa các nút bên phải,
+   đảm bảo các nút bên trong cũng chịu luật (nếu class khác tên, dùng selector sau) */
+.trip-card-actions > .action-right > button {
+  border-radius: 0 !important;
+}

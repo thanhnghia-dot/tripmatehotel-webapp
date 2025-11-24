@@ -1,0 +1,225 @@
+.album-container {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 20px;
+}
+
+.album-wrapper {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.album-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.trip-name {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.alert {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+.alert.error {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+.alert.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+/* ===== FORM UPLOAD ===== */
+.upload-form {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-form input,
+.upload-form select {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin: 10px 0;
+}
+.preview-grid img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.btn-upload {
+  background: #22c55e;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.btn-upload:hover {
+  background: #16a34a;
+}
+
+/* ===== GRID ALBUM ===== */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.album-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  position: relative;
+}
+
+.album-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.album-info {
+  padding: 12px;
+}
+
+/* ===== 2 NÚT NẰM CẠNH NHAU ===== */
+.album-info button {
+  width: 48%;
+  padding: 8px;
+  margin: 5px 1%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-fav {
+  background: #f87171;
+  color: white;
+}
+.btn-fav:hover {
+  background: #ef4444;
+}
+
+.btn-view {
+  background: #3b82f6;
+  color: white;
+}
+.btn-view:hover {
+  background: #2563eb;
+}
+
+/* ===== ICON SAO YÊU THÍCH ===== */
+.album-card .relative {
+  position: relative;
+}
+.album-card .relative span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
+  padding: 3px 6px;
+}
+
+/* ===== MODAL ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.modal-item {
+  display: flex;
+  gap: 10px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 6px;
+}
+.modal-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-row .btn-fav,
+.btn-row .btn-view {
+  flex: 1;
+}

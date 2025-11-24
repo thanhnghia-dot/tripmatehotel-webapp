@@ -1,0 +1,9 @@
+.feel-feed-wrapper {
+  background-color: #f9f9f9;
+  padding: 2rem 0;
+}
+
+.feel-card video {
+  border-radius: 8px;
+  background-color: black;
+}

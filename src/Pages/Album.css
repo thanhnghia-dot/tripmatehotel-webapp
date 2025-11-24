@@ -1,0 +1,41 @@
+.album-container, .upload-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+  
+  .photo-item {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 180px;
+  }
+  
+  .upload-form input,
+  .upload-form button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .upload-form button {
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  

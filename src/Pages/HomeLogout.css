@@ -1,0 +1,241 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Content */
+.modal-content {
+  background: linear-gradient(to bottom right, #ffffff, #f7f7f7);
+  padding: 40px 30px;
+  border-radius: 15px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.35s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.modal-content h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal-content p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.modal-content .btn-primary {
+  background-color: #820000;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content .btn-primary:hover {
+  background-color: #ed4242;
+}
+
+.modal-content .btn-link {
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-top: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.coverflow-swiper {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.coverflow-swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+/* ----------------- OVERLAY ----------------- */
+.sign-in-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.25s ease forwards;
+}
+
+/* ----------------- MODAL CONTENT ----------------- */
+.sign-in-modal-content {
+  background: #ffffff;
+  padding: 28px 24px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: slideUp 0.3s ease forwards;
+}
+
+/* TITLE */
+.sign-in-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+/* TEXT */
+.sign-in-modal-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* BUTTONS */
+.sign-in-modal-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+/* PRIMARY BUTTON */
+.sign-in-modal-btn.primary-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.sign-in-modal-btn.primary-btn:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* CLOSE BUTTON */
+.sign-in-modal-btn.close-btn {
+  background: transparent;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.sign-in-modal-btn.close-btn:hover {
+  background: #dc3545;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ----------------- ANIMATIONS ----------------- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 576px) {
+  .sign-in-modal-content {
+    padding: 20px 16px;
+  }
+  .sign-in-modal-title {
+    font-size: 18px;
+  }
+  .sign-in-modal-text {
+    font-size: 13px;
+  }
+  .sign-in-modal-btn {
+    width: 100%;
+  }
+}
+.modal-close-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;                  /* khoảng cách icon - text nhỏ hơn */
+  padding: 4px 12px;          /* giảm padding */
+  font-size: 13px;            /* nhỏ hơn */
+  font-weight: 500;
+  color: #dc3545;
+  background: rgba(220, 53, 69, 0.08); /* nền nhẹ hơn */
+  border: 1px solid #dc3545;
+  border-radius: 10px;        /* bo tròn vừa phải */
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.modal-close-btn:hover {
+  background: #dc3545;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.modal-close-btn:active {
+  transform: translateY(0px);
+}
+
+.modal-close-btn .close-icon {
+  font-size: 14px;            /* icon nhỏ hơn */
+  line-height: 1;
+}

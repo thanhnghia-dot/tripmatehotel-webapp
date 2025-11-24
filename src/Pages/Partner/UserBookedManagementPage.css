@@ -1,0 +1,325 @@
+.hegt61-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  background-color: #f9fafb;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Title */
+.hegt61-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1f2937;
+  text-align: center;
+}
+
+/* Error */
+.hegt61-error {
+  color: #d97706;
+  background-color: #fef3c7;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Controls: Search + Filter + Export */
+.hegt61-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.hegt61-table-wrapper {
+  overflow-x: auto;
+}
+
+.hegt61-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.hegt61-table-header {
+  background-color: #f1f5f9;
+}
+
+.hegt61-cell {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.hegt61-row:hover {
+  background-color: #f9fafb;
+}
+
+.hegt61-empty {
+  text-align: center;
+  font-style: italic;
+  color: #6b7280;
+}
+.hegt61-search-input {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  flex: 1 1 220px;
+  min-width: 220px;
+  font-size: 14px;
+}
+
+.hegt61-export-btn {
+  padding: 10px 14px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.hegt61-export-btn:hover {
+  background-color: #059669;
+}
+.hegt61-button {
+  background-color: #22c55e;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hegt61-button:hover {
+  background-color: #16a34a;
+}
+/* Container */
+.hegt61-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  background-color: #f9fafb;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Title */
+.hegt61-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1f2937;
+  text-align: center;
+}
+
+/* Error */
+.hegt61-error {
+  color: #d97706;
+  background-color: #fef3c7;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Table */
+.hegt61-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.hegt61-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.hegt61-table-header {
+  background-color: #3b82f6;
+  color: white;
+  text-align: left;
+}
+
+.hegt61-cell {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hegt61-row:nth-child(even) {
+  background-color: #f3f4f6;
+}
+
+/* Button */
+.hegt61-button {
+  padding: 6px 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hegt61-button:hover {
+  background-color: #1e40af;
+}
+
+/* Search & Export */
+.hegt61-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hegt61-search-input {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 220px;
+}
+
+.hegt61-export-btn {
+  padding: 10px 14px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.hegt61-export-btn:hover {
+  background-color: #059669;
+}
+
+/* Empty row */
+.hegt61-empty {
+  text-align: center;
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hegt61-table {
+    font-size: 14px;
+  }
+
+  .hegt61-title {
+    font-size: 24px;
+  }
+
+  .hegt61-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hegt61-search-input {
+    width: 100%;
+  }
+
+  .hegt61-export-btn {
+    width: 100%;
+  }
+}
+.hegt61-button.sent {
+  background-color: #10b981; /* xanh lá đậm */
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: default;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.hegt61-button.not-paid {
+  background-color: #ef4444; /* đỏ tươi (red-500 Tailwind) */
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: not-allowed;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.hegt61-button.not-paid:hover {
+  background-color: #dc2626; /* đỏ đậm hơn (red-600 Tailwind) */
+}
+.hegt61-notification-wrapper {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hegt61-notification {
+  padding: 12px 16px;
+  border-radius: 6px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  font-weight: 600;
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.hegt61-notification-success {
+  background-color: #4caf50;
+}
+
+.hegt61-notification-error {
+  background-color: #f44336;
+}
+
+.hegt61-notification-info {
+  background-color: #2196f3;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Upcoming check-in: xanh nhạt */
+.hegt61-row.upcoming {
+  background-color: #d1fae5; /* xanh nhạt */
+}
+
+/* Overdue booking: đỏ nhạt */
+.hegt61-row.overdue {
+  background-color: #fee2e2; /* đỏ nhạt */
+}

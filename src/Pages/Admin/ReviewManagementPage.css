@@ -1,0 +1,552 @@
+.review-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.review-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 24px;
+}
+
+/* Search Form */
+.review-search-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.review-search-input {
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.review-search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.review-search-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #2563eb;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.review-search-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* View Mode Selector */
+.review-form-input {
+  margin-left: 15px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 14px;
+  width: 150px;
+  transition: all 0.3s ease;
+}
+.review-form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.review-table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.review-table-header {
+  background-color: #f3f4f6;
+}
+
+.review-table-cell {
+  border: 1px solid #e5e7eb;
+  padding: 0.875rem;
+  font-size: 14px;
+  color: #374151;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 100px; /* Đảm bảo các cột có chiều rộng tối thiểu */
+}
+
+.review-table-cell:first-child {
+  font-weight: 500;
+}
+
+.review-table-row:hover {
+  background-color: #f9fafb;
+}
+
+.review-table-image {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+.review-action-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-width: 150px; /* Đảm bảo ô action có chiều rộng đủ lớn chứa các button */
+}
+
+.review-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%; /* Đảm bảo container của các button chiếm toàn bộ chiều ngang */
+}
+
+.review-view-detail-btn,
+.review-reply-btn {
+  padding: 0.625rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%; /* Button chiếm toàn bộ chiều ngang của container cha */
+  text-align: center;
+}
+
+.review-view-detail-btn {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.review-view-detail-btn:hover {
+  background-color: #d97706;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-reply-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.review-reply-btn:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-table {
+  width: 100%;
+      align-items: center;
+    text-align: center;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+
+.review-form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.review-table-header {
+  background-color: #f3f4f6;
+}
+
+.review-table-cell {
+  border: 1px solid #e5e7eb;
+  padding: 0.875rem;
+  font-size: 14px;
+  color: #374151;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.review-table-cell:first-child {
+  font-weight: 500;
+}
+
+.review-table-row:hover {
+  background-color: #f9fafb;
+}
+
+.review-table-image {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+.review-action-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.review-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.review-view-detail-btn,
+.review-reply-btn {
+
+  padding: 0.625rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.review-view-detail-btn {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.review-view-detail-btn:hover {
+  background-color: #d97706;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-reply-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.review-reply-btn:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Pagination */
+.review-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.review-pagination-btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #2563eb;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.review-pagination-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.review-pagination-btn:not(:disabled):hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-pagination-numbers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.review-pagination-number {
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.375rem;
+  font-size: 14px;
+}
+
+.review-table-cell:first-child {
+  font-weight: 500;
+}
+
+.review-table-row:hover {
+  background-color: #f9fafb;
+}
+
+.review-table-image {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+.review-action-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.review-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.review-view-detail-btn,
+.review-reply-btn {
+  padding: 0.625rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.review-view-detail-btn {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.review-view-detail-btn:hover {
+  background-color: #d97706;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-reply-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.review-reply-btn:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Pagination */
+.review-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.review-pagination-btn {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #2563eb;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.review-pagination-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.review-pagination-btn:not(:disabled):hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-pagination-numbers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.review-pagination-number {
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.375rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  background-color: #f3f4f6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.review-pagination-number:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.review-pagination-number.review-active {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+/* Error Message */
+.review-error-message {
+  color: #ef4444;
+  font-size: 14px;
+  margin-bottom: 1.5rem;
+}
+
+/* Modal */
+.review-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px; /* Khoảng cách để không chạm mép trên/dưới */
+}
+
+.review-modal-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 600px; /* Rộng hơn */
+  max-height: 80vh; /* Giới hạn chiều cao */
+  overflow-y: auto; /* Thanh cuộn nếu nội dung dài */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Giảm khoảng cách để gọn hơn */
+}
+
+.review-modal-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.review-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.review-modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.review-modal-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.review-modal-value {
+  font-size: 14px;
+  color: #374151;
+  word-break: break-word;
+}
+
+.review-modal-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 0.375rem;
+}
+
+.review-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.review-modal-close-btn,
+.review-modal-submit-btn {
+margin-top: 10px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.review-modal-close-btn {
+  background-color: #6b7280;
+  color: white;
+}
+
+.review-modal-close-btn:hover {
+  background-color: #4b5563;
+  transform: translateY(-1px);
+}
+
+.review-modal-submit-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.review-modal-submit-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Textarea */
+.review-form-input.review-textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 14px;
+}
+
+.review-form-input.review-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+.spinner {
+  border: 4px solid #f3f3f3; /* Light gray */
+  border-top: 4px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+

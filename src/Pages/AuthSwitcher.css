@@ -1,0 +1,117 @@
+/* ==== CONTAINER ==== */
+.switch-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 650px;
+  margin: auto;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 24px;
+    margin: 60px auto 0 auto;
+  display: flex;
+  box-shadow: 0 0 30px rgba(209, 0, 36, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ==== FORM WRAPPER ==== */
+.switch-form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* ==== INDIVIDUAL FORM PANELS ==== */
+.form-panel {
+  width: 50%;
+  padding: 60px 40px;
+  transition: opacity 0.6s ease, z-index 0.6s ease;
+  opacity: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.switch-container:not(.register-mode) .form-panel.login-panel {
+  opacity: 1;
+  z-index: 10;
+}
+
+.switch-container.register-mode .form-panel.register-panel {
+  opacity: 1;
+  z-index: 10;
+}
+
+/* ==== OVERLAY ==== */
+.switch-overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, #D10024, #8B001A);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.6s ease-in-out;
+  z-index: 5;
+  padding: 40px;
+  border-radius: 0 24px 24px 0;
+}
+
+.switch-container.register-mode .switch-overlay {
+  transform: translateX(-100%);
+}
+
+.switch-container:not(.register-mode) .switch-overlay {
+  transform: translateX(0);
+}
+
+/* ==== BUTTON STYLE ==== */
+.switch-overlay button {
+  padding: 14px 32px;
+  background-color: white;
+  color: #D10024;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.switch-overlay button:hover {
+  background-color: #f4f4f4;
+  transform: scale(1.05);
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .switch-container {
+    flex-direction: column;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  .switch-form {
+    flex-direction: column;
+  }
+
+  .form-panel {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .switch-overlay {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 16px 16px;
+    transform: translateX(0) !important;
+  }
+}

@@ -1,0 +1,473 @@
+/* Container & Title */
+.rm-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.rm-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Error Message */
+.rm-error-message {
+  color: red;
+  margin-bottom: 15px;
+}
+
+/* Search Bar */
+.rm-search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.rm-search-input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.rm-search-btn,
+.rm-add-btn {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.rm-add-btn {
+  background-color: #28a745;
+}
+
+.rm-search-btn:hover,
+.rm-add-btn:hover {
+  opacity: 0.9;
+}
+
+/* Table */
+.rm-table-wrapper {
+  overflow-x: auto;
+}
+
+.rm-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rm-table th,
+.rm-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 13px; 
+}
+
+.rm-description {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Action Cell */
+.rm-action-cell {
+  display: flex;
+  gap: 5px;
+}
+
+.rm-action-cell button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.rm-edit-btn {
+  background-color: #ffc107;
+  color: white;
+}
+
+.rm-view-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.rm-add-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Status Badge */
+.rm-status-badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
+
+.rm-status-badge.available {
+  background-color: #28a745;
+  color: white;
+}
+
+.rm-status-badge.maintenance {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Preview Image */
+.rm-preview-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Pagination */
+.rm-pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.rm-pagination button {
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.rm-pagination button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.rm-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Modal */
+.rm-image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.rm-image-modal-content {
+  background-color: white;
+  padding: 20px;
+  font-size: 15px;
+  border-radius: 10px;
+  width: 80%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.rm-image-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.rm-modal-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.rm-modal-info {
+  margin-bottom: 15px;
+}
+
+.rm-modal-info p,
+.rm-modal-info ul {
+  margin-bottom: 10px;
+}
+
+.rm-detail-list li {
+  margin-bottom: 5px;
+}
+
+.rm-full-image {
+  width: 100%;
+  max-width: 200px;
+  margin: 5px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Giới hạn 2 dòng với dấu ... */
+
+
+.hm-list-cell div {
+  margin-bottom: 4px;
+}
+
+.hm-view-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+.hm-view-btn:hover {
+  background-color: #2563eb;
+}
+/* Modal overlay */
+.hm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal box */
+.hm-modal {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+}
+
+/* Modal title */
+.hm-modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111827;
+  text-align: center;
+}
+
+
+.an-container, .ed-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.an-title, .ed-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Error */
+.an-error, .ed-error {
+  color: red;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Form Grid */
+.an-form, .ed-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.an-grid, .ed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Full width fields */
+.an-field-full, .ed-field-full {
+  grid-column: 1 / -1;
+}
+
+/* Label & Input */
+.an-field, .ed-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.an-label, .ed-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.an-input, .ed-input,
+.an-textarea, .ed-textarea,
+.an-select, .ed-select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.an-input:focus, .ed-input:focus,
+.an-textarea:focus, .ed-textarea:focus,
+.an-select:focus, .ed-select:focus {
+  border-color: #007bff;
+}
+
+/* Textarea */
+.an-textarea, .ed-textarea {
+  resize: vertical;
+}
+
+/* Amenities */
+.an-amenities, .ed-amenities {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.an-amenity-column, .ed-amenity-column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.an-amenity-item, .ed-amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+/* Buttons */
+.an-buttons, .ed-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.an-back-btn, .ed-back-btn,
+.an-save-btn, .ed-save-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.an-back-btn, .ed-back-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.an-back-btn:hover, .ed-back-btn:hover {
+  background-color: #b3b3b3;
+}
+
+.an-save-btn, .ed-save-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.an-save-btn:hover, .ed-save-btn:hover {
+  background-color: #0062cc;
+}
+
+/* File input */
+.an-input[type="file"], .ed-input[type="file"] {
+  padding: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .an-grid, .ed-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.ed-preview-image {
+  margin-top: 10px;
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.rm-stats-btn {
+  background-color: #f9c74f;
+  border: none;
+  color: #000;
+  padding: 5px 8px;
+  margin-left: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.rm-stats-btn:hover {
+  background-color: #f4a261;
+}
+/* file HotelManagermentPage.css hoặc Toast.css */
+.Toastify__toast {
+  font-size: 12px !important;       /* chữ to hơn */
+  min-width: 350px !important;      /* toast rộng hơn */
+  padding: 20px 30px !important;    /* padding lớn hơn */
+  border-radius: 12px !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25) !important;
+}
+
+/* Nội dung toast */
+.Toastify__toast-body {
+  font-weight: 600 !important;
+  font-size: 12px !important;       /* chữ to hơn */
+}
+
+/* Tiêu đề toast nếu có */
+.Toastify__toast--success,
+.Toastify__toast--error,
+.Toastify__toast--info,
+.Toastify__toast--warning {
+  min-height: 60px !important;
+}
