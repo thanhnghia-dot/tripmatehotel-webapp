@@ -65,8 +65,8 @@ import RoomDetailsPage from './Pages/RoomDetailsPage';
 import EditProfile from "./Pages/EditProfile";
 
 function App() {
-  return (
-    <BrowserRouter>
+  return ( 
+   <BrowserRouter basename="/tripmatehotel-webapp">
       <Routes>
         {/* Public/Auth */}
         <Route path="/login" element={<AuthSwitcher />} />

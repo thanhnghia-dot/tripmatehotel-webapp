@@ -91,7 +91,7 @@ function Home() {
       {/* Hero Section */}
       <section className="hero-section section-spacing" data-aos="fade-up">
         <video className="hero-video" autoPlay muted loop>
-          <source src="/assets/videos/v2.mp4" type="video/mp4" />
+          <source src={`${process.env.PUBLIC_URL}/assets/videos/v2.mp4`} type="video/mp4" />
         </video>
         <div className="hero-overlay">
           <h1>Welcome to TripMate</h1>
