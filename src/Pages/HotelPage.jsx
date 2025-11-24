@@ -298,30 +298,27 @@ function HotelPage() {
   })}
 {/* Pagination Controls */}
 {sortedHotels.length > 0 && (
-  <div className="pagination-container">
-    {/* Previous Button */}
+  <div className="hotel-pagination-container">
     <button
-      className="pagination-button"
+      className="hotel-pagination-btn"
       disabled={pageNo === 0}
       onClick={() => setPageNo((prev) => Math.max(prev - 1, 0))}
     >
       ⬅ Previous
     </button>
 
-    {/* Page Numbers */}
     {Array.from({ length: Math.ceil(sortedHotels.length / elementPerPage) }, (_, index) => (
       <button
         key={index}
-        className={`page-number ${pageNo === index ? "active" : ""}`}
+        className={`hotel-pagination-page ${pageNo === index ? "active" : ""}`}
         onClick={() => setPageNo(index)}
       >
         {index + 1}
       </button>
     ))}
 
-    {/* Next Button */}
     <button
-      className="pagination-button"
+      className="hotel-pagination-btn"
       disabled={pageNo === Math.ceil(sortedHotels.length / elementPerPage) - 1}
       onClick={() =>
         setPageNo((prev) =>
@@ -333,6 +330,7 @@ function HotelPage() {
     </button>
   </div>
 )}
+
 
     </div>
   );
