@@ -11,17 +11,23 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 const photoList = [
-  "/assets/img/b1.jpg",
-  "/assets/img/b2.jpg",
-  "/assets/img/b3.jpg",
-  "/assets/img/b4.jpg",
+  `${process.env.PUBLIC_URL}/assets/img/b1.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/b2.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/b3.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/b4.jpg`,
 ];
 
 const defaultImages = [
-  "/assets/img/trip1.jpg", "/assets/img/trip2.jpg", "/assets/img/trip3.jpg",
-  "/assets/img/trip4.jpg", "/assets/img/trip5.jpg", "/assets/img/trip6.jpg",
-  "/assets/img/trip7.jpg", "/assets/img/trip8.jpg", "/assets/img/trip9.jpg",
-  "/assets/img/trip10.jpg"
+  `${process.env.PUBLIC_URL}/assets/img/trip1.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/trip2.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/trip3.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/trip4.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/trip5.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/trip6.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/trip7.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/trip8.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/trip9.jpg`,
+  `${process.env.PUBLIC_URL}/assets/img/trip10.jpg`,
 ];
 function Home() {
   const [modalSrc, setModalSrc] = useState(null);
